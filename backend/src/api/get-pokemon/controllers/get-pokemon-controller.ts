@@ -10,6 +10,7 @@ export default {
         .getPokemonAbilitiesService(pokemonName)) as {
         pokemon: string;
         abilities: string[];
+        urlArtWork: string;
       };
 
       ctx.send({

@@ -15,6 +15,7 @@ export default {
       return {
         pokemon: pokemonName,
         abilities: sortedAbilities,
+        urlArtWork: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${response.data.id}.png`,
       };
     } catch (error) {
       return {
