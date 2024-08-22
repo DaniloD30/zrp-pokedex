@@ -1,5 +1,5 @@
 import { Context } from "koa";
-
+const { NotFoundError } = require("@strapi/utils").errors;
 export default {
   async getPokemonAbilities(ctx: Context) {
     const { pokemonName } = ctx.params as { pokemonName: string };
@@ -17,7 +17,7 @@ export default {
         data,
       });
     } catch (error) {
-      return ctx.badRequest("Pokémon not found or an error occurred.");
+      throw new NotFoundError("Pokémon not found or an error occurred.");
     }
   },
 };
