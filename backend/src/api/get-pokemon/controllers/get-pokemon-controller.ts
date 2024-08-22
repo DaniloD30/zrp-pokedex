@@ -17,10 +17,7 @@ export default {
         data,
       });
     } catch (error) {
-      ctx.send({
-        error: "Pokémon not found or an error occurred.",
-        details: error.message,
-      });
+      return ctx.badRequest("Pokémon not found or an error occurred.");
     }
   },
 };
