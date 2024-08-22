@@ -10,5 +10,4 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
   },
-  base: "/zrp-pokedex/front/pokedex-zrp"
 });

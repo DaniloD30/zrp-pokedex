@@ -34,7 +34,7 @@ function App() {
     <>
       <Header />
       <div className="flex justify-center items-center space-y-16 h-32">
-        <TextField placeholder="Pokemon Name" {...register("namePokemon")} />
+        <TextField placeholder="Pokemon Name" {...register("namePokemon")} maxLength={256}/>
       </div>
       {isLoading ? (
         <Spinner />

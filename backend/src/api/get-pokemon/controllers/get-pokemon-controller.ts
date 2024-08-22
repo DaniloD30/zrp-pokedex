@@ -1,17 +1,20 @@
 import { Context } from "koa";
 const { NotFoundError } = require("@strapi/utils").errors;
+
+interface PokemonAbilities {
+  pokemon: string;
+  abilities: string[];
+  urlArtWork: string;
+}
+
 export default {
   async getPokemonAbilities(ctx: Context) {
     const { pokemonName } = ctx.params as { pokemonName: string };
 
     try {
-      const data = (await strapi
+      const data: PokemonAbilities = (await strapi
         .service("api::get-pokemon.get-pokemon-services")
-        .getPokemonAbilitiesService(pokemonName)) as {
-        pokemon: string;
-        abilities: string[];
-        urlArtWork: string;
-      };
+        .getPokemonAbilitiesService(pokemonName.toLowerCase())) as PokemonAbilities;
 
       ctx.send({
         data,
