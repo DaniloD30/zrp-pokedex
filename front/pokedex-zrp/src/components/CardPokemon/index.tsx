@@ -1,4 +1,3 @@
-import React from "react";
 import { CardPokemonType } from "./types";
 
 const CardPokemon = ({ pokemon }: CardPokemonType) => {
