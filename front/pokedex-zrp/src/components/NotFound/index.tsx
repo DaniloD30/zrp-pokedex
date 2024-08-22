@@ -1,5 +1,9 @@
 const NotFound = () => {
-  return <h1>Pokemon Not Found</h1>;
+  return (
+    <div className="flex items-center justify-center">
+      <h3 className="text-4xl font-bold">Pokemon Not Found :(</h3>
+    </div>
+  );
 };
 
 export default NotFound;

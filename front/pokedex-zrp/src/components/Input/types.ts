@@ -7,6 +7,7 @@ export type TextFieldProps = {
   startAdornment?: JSX.Element;
   type?: InputNativeProps['type'];
   value?: InputNativeProps['value'];
+  name?: InputNativeProps['name'];
   id?: InputNativeProps['id'];
   placeholder?: InputNativeProps['placeholder'];
   max?: InputNativeProps['max'];

@@ -14,5 +14,7 @@ export const usePokemon = (name: string) => {
 
       return dataApi.data.data;
     },
+    retry: false,
+    enabled: name !== undefined && name !== "",
   });
 };

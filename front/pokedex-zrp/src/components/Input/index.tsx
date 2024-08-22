@@ -11,6 +11,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
       placeholder,
       startAdornment,
       max,
+      name,
       maxLength,
       type = "text",
       onChange,
@@ -35,6 +36,7 @@ export const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
               ref={ref}
               data-testid={testId}
               type={type}
+              name={name}
               id={id}
               value={value}
               placeholder={placeholder}
