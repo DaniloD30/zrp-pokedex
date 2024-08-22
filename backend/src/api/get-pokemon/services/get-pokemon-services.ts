@@ -18,10 +18,7 @@ export default {
         urlArtWork: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${response.data.id}.png`,
       };
     } catch (error) {
-      return {
-        error: "Pokémon not found or an error occurred.",
-        details: error.message,
-      };
+      throw new Error("Pokémon not found or an error occurred.");
     }
   },
 };

@@ -24,6 +24,11 @@ describe("Pokemon Controller", () => {
     });
   });
 
-  
+  it("should handle errors when pokemon is not found", async () => {
+    mock.onGet("https://pokeapi.co/api/v2/pokemon/pikachu").reply(404);
 
+    await expect(
+      service.getPokemonAbilitiesService("not-exist")
+    ).rejects.toThrow("Pokémon not found or an error occurred.");
+  });
 });
