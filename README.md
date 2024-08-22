@@ -1,5 +1,7 @@
 # Projeto Full-Stack ZRP
 
+![image](https://github.com/user-attachments/assets/302e7b65-19a9-45f4-aca8-098b4a024415)
+
 Este projeto é uma aplicação full-stack construída com as seguintes tecnologias:
 
 - **Backend**: Strapi, TypeScript, Jest, Docker
