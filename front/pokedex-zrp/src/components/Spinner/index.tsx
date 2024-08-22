@@ -4,6 +4,7 @@ export const Spinner = ({ width = '24', height = '24' }: SpinnerProps) => {
   return (
     <div role="status" className='flex items-center justify-center'>
       <svg
+      data-testid="spinner-component"
         aria-hidden="true"
         className="animate-spin fill-blue-400"
         viewBox={`0 0 101 101`}
